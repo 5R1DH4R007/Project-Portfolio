@@ -197,10 +197,18 @@ select{
     float:left;
     border-radius:1.5em;
     margin:0.5vw;
+    
     cursor:pointer; 
 }
+.crd{
+    font-family:sans-serif;
+    padding-left:15px;
+}
+.crd-img{
+    padding: 20px 0 0 9px;
+}
 .cards:hover{
-    background: green;
+    box-shadow:5px 5px 5px #ddd;
 }
 /**************************************/
 
