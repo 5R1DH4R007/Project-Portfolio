@@ -38,33 +38,33 @@
            <hr style="width:250%; padding-right:10vw; margin-left:-9vw; opacity: 0.3; border-radius:30%;">
             <!-------- chat box------->
             
-            <button class="open-button" onclick="openForm()" title="Chat">Activity <strong>Feed</strong></button>
-           
+            <button class="open-button" onclick="openForm()" title="Chat">Activity <strong>Feed</strong></button>           
             <div class="chat-popup" id="chatbox">
+                <button onclick="closeForm()" style="margin-top:15px;margin-left:190px; border:none;background: none; color:red; cursor: pointer; font-weight: bolder; font-size:20px;">X</button>
                 <form class="form-container" title="Static chat box">
                      
                     <div class="container">
                         <img src="pro-pic1.png" alt="icon" style="width:50px;">
-                        <p><b>Completed task<br> </b>Prepare moodboard for website branding.</p>
+                        <p><b>Completed task<br></b>Prepare moodboard for website branding.</p>
                     </div>
                     <div class="container darker">
                         <img src="profile.png" alt="Avatar" class="right" style="width:2em;">
-                        <p>Hey! I'm fine. Thanks for asking!</p>
+                        <p>Coffee Break</p>
                     </div>
                     <div class="container">
                         <img src="pro-pic2.png" alt="Avatar" style="width:100%;">
-                        <p>Sweet! So, what do you wanna do today?</p>
+                        <p><b>Overdued Task</b> Search references for color background.</p>
                     </div>
-                    <input type="text" placeholder="Message...                                               &#128515; "></textarea>
+                    <input type="text" placeholder="Message...                                               &#128515; ">
                     <button type="submit" class="btn">Send</button>
-                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()" >Close</button>
                 </form>
             </div>
             
             <script>
                 function openForm() {
                     document.getElementById("chatbox").style.display = "block";
-                    document.getElementById("chatbox").innerHTML("hi")
+                    
                 }
                 function closeForm() {
                     document.getElementById("chatbox").style.display = "none";
