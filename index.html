@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>   portfolio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+       
+        <a href="#"><img src="top-icon3.png" alt="icon" class="toprow" width=20vw;></a>
+        <a href="#"><img src="top-icon2.png" alt="icon" class="toprow" width=20vw;></a>
+        <a href="#"><img src="top-icon1.png" alt="icon" class="toprow" width=20vw;></a>
+        
+        <a href="#"><span id="snp">Start a new Project</span></a>
+        
+        <header>
+            <div class="row1"><img src="logo-icon.png" alt="icon" width="55" height="55" id="img1" ></div>
+            <div class="row1"><h2><span>Projects</span><span style="opacity:0.2; margin-left:2vw;">Templates</span></h2>
+           </div>
+            <br><br><br><br>
+        </header>
+        
+         <!---profile-side--->
+        
+        <div class="right-container">
+            <a href="#"><img src="profile.png" alt="profile-icon" width="60vw" id="profile" style="float:right;">
+                <h2 class="profiled" ><span style="font-family:sans-serif; font-weight:200;" >Hello,</span><br><span style="font-family:sans-serif">Sullivan</span></h2></a>
+             <br><br><hr style="width:250%; padding-right:10vw; margin-left:-9vw; opacity: 0.3; border-radius:30%;">
+            
+            <!-- project counts-->
+            
+            <div class="count1"><p style="opacity:0.3; font-weight:600;">Total projects:</p><br><span class="counter" id="count1"> </span></div>
+            <div class="count2"><p style="opacity:0.3; font-weight:600;">Completed:</p><br><span  class="counter" id="count2"> </span></div>
+            <br><br><br><br><br><br><br>
+            <div class="count3"><p style="opacity:0.3; font-weight:600;">In Progress:</p><br><span  class="counter" id="count3"> </span></div>
+            <div class="count4"><p style="opacity:0.3; font-weight:600;">Out of schedule:</p><br><span class="counter" id="count4"> </span></div>
+           <hr style="width:250%; padding-right:10vw; margin-left:-9vw; opacity: 0.3; border-radius:30%;">
+            <!-------- chat box------->
+            
+            <button class="open-button" onclick="openForm()" title="Chat">Activity <strong>Feed</strong></button>
+           
+            <div class="chat-popup" id="chatbox">
+                <form class="form-container" title="Static chat box">
+                     
+                    <div class="container">
+                        <img src="pro-pic1.png" alt="icon" style="width:50px;">
+                        <p><b>Completed task<br> </b>Prepare moodboard for website branding.</p>
+                    </div>
+                    <div class="container darker">
+                        <img src="profile.png" alt="Avatar" class="right" style="width:2em;">
+                        <p>Hey! I'm fine. Thanks for asking!</p>
+                    </div>
+                    <div class="container">
+                        <img src="pro-pic2.png" alt="Avatar" style="width:100%;">
+                        <p>Sweet! So, what do you wanna do today?</p>
+                    </div>
+                    <input type="text" placeholder="Message...                                               &#128515; "></textarea>
+                    <button type="submit" class="btn">Send</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+            </div>
+            
+            <script>
+                function openForm() {
+                    document.getElementById("chatbox").style.display = "block";
+                    document.getElementById("chatbox").innerHTML("hi")
+                }
+                function closeForm() {
+                    document.getElementById("chatbox").style.display = "none";
+                }
+            </script>
+             <!------------------------>
+        </div>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                function counter(id, start, end, duration) {
+                    let obj = document.getElementById(id),current = start,range = end - start,increment = end > start ? 1 : -1,
+                        step = Math.abs(Math.floor(duration / range)),timer = setInterval(() => {
+                            current += increment;
+                            obj.textContent = current;
+                            if (current == end) {
+                                clearInterval(timer);
+                            }
+                        }, step);
+                }
+                counter("count1", 0, 189, 3000);
+                counter("count2", 0, 174, 2500);
+                counter("count3", 0, 13, 3000);
+                counter("count4", 0, 2, 1500);
+            }); 
+        </script>
+        
+        <!------------------ Cards -------------------->
+        
+        <div id="content-container">
+            <a href="#"><img src="grid.png" alt="icon" width=40vw style="padding:1vw;padding-bottom:3vw;"></a>
+            <a href="#"><img src="menu.png" alt="icon" width=40vw style="opacity:0.2; padding-bottom:3vw;"></a>
+    
+            <div class="row-box">
+                <span class="selector-top">Sort</span>
+                <div class="select">
+                <select>
+                    <option>By Activity</option>
+                    <option>By case Study</option>
+                    <option>By Requirement task</option>
+                </select>
+                </div>
+            </div>
+            
+             <div class="row-box">
+                <span class="selector-top">Category</span>
+                <div class="select">
+                <select>
+                    <option>Internal</option>
+                    <option>Departmental</option>
+                    <option>External</option>
+                </select>
+                </div>
+            </div>
+            
+            <div class="row-box">
+                <span class="selector-top">Label</span>
+                <div class="select">
+                <select>
+                    <option>New</option>
+                    <option>Open</option>
+                    <option selected>In Progress</option>
+                    <option>Completed</option>
+                </select>
+                </div>
+            </div>
+            
+            <div class="row-box">
+                <span class="selector-top">Client</span>
+                <div class="select">
+                <select>
+                    <option>Urgent Clients</option>
+                    <option>Static Clients</option>
+                    <option>Dynamic Clients</option>
+                    <option selected>All Clients</option>
+                </select>
+                </div>
+            </div>
+            <br>
+            
+            <!--- CARD COLLECTIONS --->
+            
+            <div class="cards">
+                   <a href="#" ></a>
+            </div>
+            
+            <div class="cards">
+                   <a href="#"> </a>
+            </div>
+            
+            <div class="cards">
+                   <a href="#"> </a>
+            </div>
+            
+            <div class="cards">
+                   <a href="#"> </a>
+            </div>
+            
+            
+            <div class="cards">
+                   <a href="#"> </a>
+            </div> 
+            
+            <div class="cards">
+                   <a href="#"> </a>
+            </div> 
+            
+            <div class="cards">
+                   <a href="#"> </a>
+            </div> 
+            
+            <div class="cards">
+                   <a href="#"> </a>
+            </div>
+        </div>
+       
+         <nav>
+            <ul>
+                <li><a href="#"><img src="icon1.png" alt="icon" id="img2"></a></li>
+                <li><a href="#"><img src="icon2.png" alt="icon" class="imgs"></a></li>
+                <li><a href="#"><img src="icon3.png" alt="icon" class="imgs"></a></li>
+                <li><a href="#"><img src="icon4.svg" alt="icon" class="imgs"></a></li>
+                <li><a href="#"><img src="icon5.png" alt="icon" class="imgs"></a></li>
+                <li><a href="#"><img src="icon6.png" alt="icon" class="imgs"></a></li>
+                <li><a href="#"><img src="icon7.png" alt="icon" class="imgs"></a></li>
+            </ul>
+        </nav>
+        
+        <footer>
+            <ul>
+                <li><a href="#"><img src="icon8.png" alt="icon" class="imgs"></a></li>
+                <li><a href="#"><img src="icon9.png" alt="icon" class="imgs"></a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
